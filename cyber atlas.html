@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A curated directory of cybersecurity research, Chinese security communities, CTFs, AppSec and digital forensics resources.">
+<meta name="color-scheme" content="dark light">
+<title>CyberSec Atlas | Research Directory</title>
+<script>try { const t=localStorage.getItem('cyber-atlas-theme'); if(t==='light'||t==='dark')document.documentElement.dataset.theme=t; } catch(e){} document.documentElement.classList.add('js');</script>
+<style>
+:root{color-scheme:dark;--bg:#0b111b;--panel:#111b29;--panel-hover:#162337;--text:#e8eef7;--muted:#9baec3;--line:#293a4f;--accent:#65dfbd;--accent-bg:#15392f;--focus:#8debd1;--shadow:0 12px 32px #0002}
+:root[data-theme=light]{color-scheme:light;--bg:#f3f6fa;--panel:#fff;--panel-hover:#f5f9fc;--text:#152438;--muted:#4b6177;--line:#d2dce8;--accent:#096b55;--accent-bg:#dff4eb;--focus:#087b63;--shadow:0 12px 32px #233e5310}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:1rem}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button,select{cursor:pointer}button,input,select{min-height:44px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}button{color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:.55rem .85rem}button:hover{background:var(--panel-hover)}[hidden]{display:none!important}.wrap{width:min(1180px,calc(100% - 2rem));margin-inline:auto}.skip{position:absolute;left:1rem;top:-100px;background:var(--panel);padding:.75rem;z-index:10}.skip:focus{top:1rem}.header{border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}.brand{display:flex;align-items:center;gap:.65rem;color:var(--text);font-weight:750;letter-spacing:-.02em}.brand-icon{display:grid;place-items:center;width:36px;height:36px;border-radius:9px;background:var(--accent-bg);color:var(--accent);font:700 16px ui-monospace,monospace}.nav-actions{display:flex;gap:.5rem}.hero{padding:3.2rem 0 2.1rem}.eyebrow{margin:0 0 .8rem;color:var(--accent);font:600 .75rem/1.6 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}h1{font-size:clamp(2.3rem,6vw,4.3rem);line-height:1.05;letter-spacing:-.055em;margin:0 0 1rem;max-width:850px}h1 span{color:var(--accent)}.lead{font-size:clamp(1rem,2vw,1.15rem);color:var(--muted);max-width:760px;margin:0}.stats{display:flex;flex-wrap:wrap;gap:.7rem 2rem;margin-top:1.65rem}.stat{display:flex;align-items:baseline;gap:.5rem}.stat strong{font-size:1.5rem;letter-spacing:-.04em;color:var(--accent)}.stat span{font-size:.85rem;color:var(--muted)}.controls{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1rem;box-shadow:var(--shadow);margin-bottom:1.2rem}.fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px,260px);gap:.75rem}.field label{display:block;color:var(--muted);font-size:.78rem;font-weight:600;margin-bottom:.3rem}input,select{width:100%;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text);padding:.65rem .8rem}input::placeholder{color:var(--muted)}.filters{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;margin-top:.85rem}.filters button{font-size:.85rem}.filters [aria-pressed=true]{background:var(--accent-bg);color:var(--accent);border-color:var(--accent);font-weight:650}.result-count{margin-left:auto;font-size:.85rem;color:var(--muted)}.category-nav{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.4rem 0 2.2rem}.category-nav a{display:inline-flex;align-items:center;min-height:36px;padding:.25rem .7rem;border:1px solid var(--line);border-radius:7px;color:var(--muted);font-size:.8rem}.category-nav a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}.category{margin-bottom:2.7rem}.section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:.6rem;padding-bottom:.7rem;border-bottom:1px solid var(--line);margin-bottom:.9rem}.section-heading h2{margin:0;font-size:1rem;font-weight:600;color:var(--accent);font-family:ui-monospace,monospace}.section-heading h2 span{font:700 1.22rem/1.4 system-ui,sans-serif;color:var(--text);margin-left:.35rem}.category-count{font-size:.78rem;color:var(--muted);white-space:nowrap}.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}.resource{display:flex;flex-direction:column;gap:.65rem;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:1rem;transition:border-color .15s,background .15s}.resource:hover{border-color:var(--accent);background:var(--panel-hover)}.resource-top{display:flex;gap:.5rem;align-items:flex-start;justify-content:space-between}.resource h3{font-size:1rem;line-height:1.45;margin:.25rem 0 0;overflow-wrap:anywhere;min-width:0}.resource-link{color:var(--text);font-weight:720}.resource-link:hover{color:var(--accent)}.external{color:var(--accent);font-size:.85em;white-space:nowrap}.save{flex:none;width:44px;height:44px;min-height:44px;padding:0;font-size:1.5rem;line-height:1;background:transparent;border-color:transparent;color:var(--muted)}.save[aria-pressed=true]{color:var(--accent);background:var(--accent-bg);border-color:var(--line)}.resource p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.55;overflow-wrap:anywhere}.resource-meta{display:flex;align-items:center;gap:.45rem;flex-wrap:wrap;margin-top:auto;padding-top:.4rem;font-size:.73rem}.domain{font-family:ui-monospace,monospace;color:var(--muted);overflow-wrap:anywhere;max-width:100%}.pick{color:var(--accent);background:var(--accent-bg);padding:.13rem .45rem;border-radius:5px;font-weight:650}.empty{padding:2rem;text-align:center;border:1px dashed var(--line);border-radius:12px;color:var(--muted);margin:1rem 0 2rem}.tool{border:1px solid var(--line);border-radius:12px;padding:1.2rem;background:var(--panel);margin:1rem 0 2rem}.tool h2{font-size:1.2rem;margin:0 0 .5rem}.tool p{color:var(--muted);margin:.4rem 0 1rem;font-size:.9rem}.tool-actions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}.tool-actions a{display:inline-flex;align-items:center;min-height:44px;border:1px solid var(--line);border-radius:8px;padding:.45rem .8rem}.tool-actions a:hover{background:var(--accent-bg);text-decoration:none}.foot{border-top:1px solid var(--line);padding:1.4rem 0 2rem;font-size:.83rem;color:var(--muted)}.foot p{margin:.3rem 0}.foot-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}.no-js{display:block}.js .no-js{display:none}html:not(.js) .js-only{display:none!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:850px){.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.wrap{width:calc(100% - 1.25rem)}.hero{padding:2.1rem 0 1.6rem}.fields{grid-template-columns:1fr}.resource-grid{grid-template-columns:1fr}.section-heading h2 span{font-size:1.1rem}.category-count{font-size:.72rem}.result-count{margin-left:0;width:100%}.category-nav{gap:.35rem;margin-bottom:1.7rem}.category-nav a{min-height:44px}.brand{font-size:.95rem}.nav{gap:.4rem}.nav-actions button{font-size:.82rem}.stats{gap:.6rem 1.25rem}.stat strong{font-size:1.25rem}.resource{padding:.9rem}.foot-row{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to resources</a>
+<header class="header"><div class="wrap nav"><a class="brand" href="#top"><span class="brand-icon" aria-hidden="true">&gt;_</span> CyberSec Atlas</a><div class="nav-actions"><button id="theme-toggle" class="js-only" type="button" aria-label="Switch to light mode">☀ Light mode</button></div></div></header>
+<main id="main" class="wrap">
+<section class="hero" aria-labelledby="page-title"><p class="eyebrow">Personal research library / 01</p><h1 id="page-title">Go deeper.<br><span>Learn security.</span></h1><p class="lead">A curated gateway to technical cybersecurity research, with an emphasis on Chinese and East Asian communities. Explore original research, structured learning, AppSec, CTFs, DFIR and AI security.</p><div class="stats"><div class="stat"><strong>99</strong><span>resources</span></div><div class="stat"><strong>10</strong><span>categories</span></div><div class="stat"><strong>46</strong><span>in dedicated Chinese sections</span></div></div></section>
+<div class="controls js-only" role="search" aria-label="Filter directory"><div class="fields"><div class="field"><label for="search">Search resources</label><input type="search" id="search" placeholder="e.g. Android, 代码审计, OWASP…" autocomplete="off"></div><div class="field"><label for="category-filter">Category</label><select id="category-filter"><option value="all">All categories</option><option value="cat-1">Chinese forums</option>
+<option value="cat-2">Chinese knowledge bases</option>
+<option value="cat-3">Chinese research blogs &amp; labs</option>
+<option value="cat-4">Chinese practice platforms</option>
+<option value="cat-5">Chinese aggregators</option>
+<option value="cat-6">Taiwan, Japan &amp; South Korea</option>
+<option value="cat-7">DFIR &amp; blue team</option>
+<option value="cat-8">International forums</option>
+<option value="cat-9">Web security &amp; VAPT</option>
+<option value="cat-10">AI security &amp; automation</option></select></div></div><div class="filters" aria-label="Resource views"><button type="button" data-view="all" aria-pressed="true">All resources</button><button type="button" data-view="priority" aria-pressed="false">Start here (15)</button><button type="button" data-view="saved" aria-pressed="false">Bookmarks (<span id="saved-count">0</span>)</button><button id="reset" type="button">Reset filters</button><span class="result-count" id="result-count" role="status" aria-live="polite">99 resources shown</span></div></div>
+<noscript><p class="no-js">All links are available without JavaScript. Enable JavaScript for search, filters, bookmarks and theme switching.</p></noscript>
+<nav class="category-nav" aria-label="Jump to category"><a href="#cat-1">Chinese forums</a><a href="#cat-2">Chinese knowledge bases</a><a href="#cat-3">Chinese research blogs &amp; labs</a><a href="#cat-4">Chinese practice platforms</a><a href="#cat-5">Chinese aggregators</a><a href="#cat-6">Taiwan, Japan &amp; South Korea</a><a href="#cat-7">DFIR &amp; blue team</a><a href="#cat-8">International forums</a><a href="#cat-9">Web security &amp; VAPT</a><a href="#cat-10">AI security &amp; automation</a></nav>
+<div id="empty" class="empty" hidden>No matching resources. Try another keyword, category or view.</div>
+<div id="directory"><section class="category" id="cat-1"><div class="section-heading"><h2>01 <span>Chinese forums</span></h2><span class="category-count">9 resources</span></div><div class="resource-grid"><article class="resource" data-id="r001" data-priority="true">
+  <div class="resource-top"><h3><a class="resource-link" href="https://cn.t00ls.com/" target="_blank" rel="noopener noreferrer">T00ls <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark T00ls" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Chinese security community for code auditing, vulnerability research and security tool development.</p><div class="resource-meta"><span class="domain">cn.t00ls.com</span><span class="pick">Start here</span></div>
+</article>
+<article class="resource" data-id="r002" data-priority="true">
+  <div class="resource-top"><h3><a class="resource-link" href="https://bbs.kanxue.com/" target="_blank" rel="noopener noreferrer">Kanxue — 看雪论坛 <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Kanxue — 看雪论坛" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Android, iOS, binary security, reverse engineering and IoT research.</p><div class="resource-meta"><span class="domain">bbs.kanxue.com</span><span class="pick">Start here</span></div>
+</article>
+<article class="resource" data-id="r003" data-priority="true">
+  <div class="resource-top"><h3><a class="resource-link" href="https://xz.aliyun.com/" target="_blank" rel="noopener noreferrer">Xianzhi — 先知社区 <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Xianzhi — 先知社区" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Alibaba Cloud community for application, cloud and vulnerability research.</p><div class="resource-meta"><span class="domain">xz.aliyun.com</span><span class="pick">Start here</span></div>
+</article>
+<article class="resource" data-id="r004" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.freebuf.com/" target="_blank" rel="noopener noreferrer">FreeBuf <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark FreeBuf" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Chinese technical security articles, practical testing and industry developments.</p><div class="resource-meta"><span class="domain">freebuf.com</span></div>
+</article>
+<article class="resource" data-id="r005" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://forum.butian.net/" target="_blank" rel="noopener noreferrer">Butian — 补天社区 <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Butian — 补天社区" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>White-hat vulnerability discovery and security assessment community.</p><div class="resource-meta"><span class="domain">forum.butian.net</span></div>
+</article>
+<article class="resource" data-id="r006" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.anquanke.com/" target="_blank" rel="noopener noreferrer">Anquanke — 安全客 <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Anquanke — 安全客" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Technical security articles, vulnerability research and CTF write-ups.</p><div class="resource-meta"><span class="domain">anquanke.com</span></div>
+</article>
+<article class="resource" data-id="r007" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.4hou.com/" target="_blank" rel="noopener noreferrer">4hou — 嘶吼 <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark 4hou — 嘶吼" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Security research, threat intelligence and vulnerability analysis.</p><div class="resource-meta"><span class="domain">4hou.com</span></div>
+</article>
+<article class="resource" data-id="r008" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.52pojie.cn/" target="_blank" rel="noopener noreferrer">52PoJie — 吾爱破解 <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark 52PoJie — 吾爱破解" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Software reverse engineering, debugging and Windows internals.</p><div class="resource-meta"><span class="domain">52pojie.cn</span></div>
+</article>
+<article class="resource" data-id="r009" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.secpulse.com/" target="_blank" rel="noopener noreferrer">SecPulse — 安全脉搏 <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark SecPulse — 安全脉搏" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Application security, security engineering and defensive research.</p><div class="resource-meta"><span class="domain">secpulse.com</span></div>
+</article></div></section>
+<section class="category" id="cat-2"><div class="section-heading"><h2>02 <span>Chinese knowledge bases</span></h2><span class="category-count">9 resources</span></div><div class="resource-grid"><article class="resource" data-id="r010" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://hello-ctf.com/hc-start/" target="_blank" rel="noopener noreferrer">Hello CTF <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Hello CTF" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Structured Chinese CTF learning material covering web, pwn, reversing and cryptography.</p><div class="resource-meta"><span class="domain">hello-ctf.com</span></div>
+</article>
+<article class="resource" data-id="r011" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://ctf-wiki.org/" target="_blank" rel="noopener noreferrer">CTF Wiki <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark CTF Wiki" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Open-source Chinese knowledge base spanning major CTF disciplines.</p><div class="resource-meta"><span class="domain">ctf-wiki.org</span></div>
+</article>
+<article class="resource" data-id="r012" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://websec.readthedocs.io/zh/latest/" target="_blank" rel="noopener noreferrer">Web Security Documentation <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Web Security Documentation" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Chinese reference for web vulnerabilities and security concepts.</p><div class="resource-meta"><span class="domain">websec.readthedocs.io</span></div>
+</article>
+<article class="resource" data-id="r013" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://github.com/CHYbeta/Web-Security-Learning" target="_blank" rel="noopener noreferrer">CHYbeta Web Security Learning <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark CHYbeta Web Security Learning" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Curated web security articles and technical learning references.</p><div class="resource-meta"><span class="domain">github.com</span></div>
+</article>
+<article class="resource" data-id="r014" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://github.com/CHYbeta/Software-Security-Learning" target="_blank" rel="noopener noreferrer">CHYbeta Software Security Learning <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark CHYbeta Software Security Learning" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Binary analysis, software security and reverse engineering learning resources.</p><div class="resource-meta"><span class="domain">github.com</span></div>
+</article>
+<article class="resource" data-id="r015" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://github.com/kokifish/CTF-detailed-writeups" target="_blank" rel="noopener noreferrer">CTF Detailed Writeups <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark CTF Detailed Writeups" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Detailed Chinese CTF explanations with English annotations.</p><div class="resource-meta"><span class="domain">github.com</span></div>
+</article>
+<article class="resource" data-id="r016" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://github.com/SecWiki/sec-chart" target="_blank" rel="noopener noreferrer">SecWiki Security Charts <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark SecWiki Security Charts" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Cybersecurity mind maps and technical domain overviews.</p><div class="resource-meta"><span class="domain">github.com</span></div>
+</article>
+<article class="resource" data-id="r017" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://github.com/ckcsec/wiki-vitepress" target="_blank" rel="noopener noreferrer">CKCsec Wiki <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark CKCsec Wiki" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Community knowledge base for web security, CTFs and incident response.</p><div class="resource-meta"><span class="domain">github.com</span></div>
+</article>
+<article class="resource" data-id="r018" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://book.crifan.org/books/information_security_overview/website/" target="_blank" rel="noopener noreferrer">Information Security Overview <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Information Security Overview" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Chinese documentation covering information security disciplines.</p><div class="resource-meta"><span class="domain">book.crifan.org</span></div>
+</article></div></section>
+<section class="category" id="cat-3"><div class="section-heading"><h2>03 <span>Chinese research blogs &amp; labs</span></h2><span class="category-count">12 resources</span></div><div class="resource-grid"><article class="resource" data-id="r019" data-priority="true">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.leavesongs.com/" target="_blank" rel="noopener noreferrer">Leavesongs — 离别歌 <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Leavesongs — 离别歌" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Phith0n&#x27;s blog on web vulnerabilities, programming and source-code auditing.</p><div class="resource-meta"><span class="domain">leavesongs.com</span><span class="pick">Start here</span></div>
+</article>
+<article class="resource" data-id="r020" data-priority="true">
+  <div class="resource-top"><h3><a class="resource-link" href="https://paper.seebug.org/" target="_blank" rel="noopener noreferrer">Seebug Paper <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Seebug Paper" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Technical security papers and original vulnerability research from Knownsec&#x27;s ecosystem.</p><div class="resource-meta"><span class="domain">paper.seebug.org</span><span class="pick">Start here</span></div>
+</article>
+<article class="resource" data-id="r021" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://tttang.com/" target="_blank" rel="noopener noreferrer">Tttang — 跳跳糖 <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Tttang — 跳跳糖" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Technical community for web security and software vulnerability articles.</p><div class="resource-meta"><span class="domain">tttang.com</span></div>
+</article>
+<article class="resource" data-id="r022" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://lorexxar.cn/" target="_blank" rel="noopener noreferrer">LoRexxar&#x27;s Blog <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark LoRexxar&#x27;s Blog" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Web security, vulnerability analysis and security tool development.</p><div class="resource-meta"><span class="domain">lorexxar.cn</span></div>
+</article>
+<article class="resource" data-id="r023" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://gosec.sjtu.edu.cn/" target="_blank" rel="noopener noreferrer">GoSec Research Team <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark GoSec Research Team" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Academic computer security research at Shanghai Jiao Tong University.</p><div class="resource-meta"><span class="domain">gosec.sjtu.edu.cn</span></div>
+</article>
+<article class="resource" data-id="r024" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://keenlab.tencent.com/en/" target="_blank" rel="noopener noreferrer">Tencent Keen Security Lab <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Tencent Keen Security Lab" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Advanced mobile, operating system and automotive security research.</p><div class="resource-meta"><span class="domain">keenlab.tencent.com</span></div>
+</article>
+<article class="resource" data-id="r025" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://xlab.tencent.com/" target="_blank" rel="noopener noreferrer">Tencent Xuanwu Lab <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Tencent Xuanwu Lab" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Software vulnerability, browser and application security research.</p><div class="resource-meta"><span class="domain">xlab.tencent.com</span></div>
+</article>
+<article class="resource" data-id="r026" data-priority="true">
+  <div class="resource-top"><h3><a class="resource-link" href="https://matrix.tencent.com/en/" target="_blank" rel="noopener noreferrer">Tencent Zhuque Lab <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Tencent Zhuque Lab" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>AI, LLM and agent security research.</p><div class="resource-meta"><span class="domain">matrix.tencent.com</span><span class="pick">Start here</span></div>
+</article>
+<article class="resource" data-id="r027" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://blog.netlab.360.com/" target="_blank" rel="noopener noreferrer">360 Netlab <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark 360 Netlab" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Network threat intelligence, botnet research and malware analysis.</p><div class="resource-meta"><span class="domain">blog.netlab.360.com</span></div>
+</article>
+<article class="resource" data-id="r028" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://blog.nsfocus.net/" target="_blank" rel="noopener noreferrer">NSFOCUS Research Blog <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark NSFOCUS Research Blog" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Vulnerability research, threat intelligence and enterprise security.</p><div class="resource-meta"><span class="domain">blog.nsfocus.net</span></div>
+</article>
+<article class="resource" data-id="r029" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://nsec.sjtu.edu.cn/" target="_blank" rel="noopener noreferrer">NSEC Lab <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark NSEC Lab" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Academic network security, distributed systems and privacy research.</p><div class="resource-meta"><span class="domain">nsec.sjtu.edu.cn</span></div>
+</article>
+<article class="resource" data-id="r030" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.hdsec.cn/" target="_blank" rel="noopener noreferrer">Soybean Security <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Soybean Security" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Chinese research team covering CTFs, security development and vulnerability research.</p><div class="resource-meta"><span class="domain">hdsec.cn</span></div>
+</article></div></section>
+<section class="category" id="cat-4"><div class="section-heading"><h2>04 <span>Chinese practice platforms</span></h2><span class="category-count">8 resources</span></div><div class="resource-grid"><article class="resource" data-id="r031" data-priority="true">
+  <div class="resource-top"><h3><a class="resource-link" href="https://ctf.show/" target="_blank" rel="noopener noreferrer">CTFshow <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark CTFshow" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Large Chinese CTF challenge collection, especially web security.</p><div class="resource-meta"><span class="domain">ctf.show</span><span class="pick">Start here</span></div>
+</article>
+<article class="resource" data-id="r032" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.ctfhub.com/" target="_blank" rel="noopener noreferrer">CTFHub <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark CTFHub" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Skill-tree-based cybersecurity learning and practice.</p><div class="resource-meta"><span class="domain">ctfhub.com</span></div>
+</article>
+<article class="resource" data-id="r033" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://buuoj.cn/" target="_blank" rel="noopener noreferrer">BUUCTF <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark BUUCTF" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Challenges from previous Chinese CTF competitions.</p><div class="resource-meta"><span class="domain">buuoj.cn</span></div>
+</article>
+<article class="resource" data-id="r034" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.nssctf.cn/" target="_blank" rel="noopener noreferrer">NSSCTF <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark NSSCTF" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Categorized CTF challenges and learning paths.</p><div class="resource-meta"><span class="domain">nssctf.cn</span></div>
+</article>
+<article class="resource" data-id="r035" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://adworld.xctf.org.cn/" target="_blank" rel="noopener noreferrer">XCTF — 攻防世界 <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark XCTF — 攻防世界" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Chinese CTF platform with beginner and advanced challenges.</p><div class="resource-meta"><span class="domain">adworld.xctf.org.cn</span></div>
+</article>
+<article class="resource" data-id="r036" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://ctf.kanxue.com/" target="_blank" rel="noopener noreferrer">KCTF <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark KCTF" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Kanxue&#x27;s competition platform with binary and software security challenges.</p><div class="resource-meta"><span class="domain">ctf.kanxue.com</span></div>
+</article>
+<article class="resource" data-id="r037" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://tools.qsnctf.com/home" target="_blank" rel="noopener noreferrer">CTFer Navigation <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark CTFer Navigation" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Directory of CTF platforms, utilities and learning material.</p><div class="resource-meta"><span class="domain">tools.qsnctf.com</span></div>
+</article>
+<article class="resource" data-id="r038" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://survival.bigcctf.cn/" target="_blank" rel="noopener noreferrer">BIGCTF Survival Guide <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark BIGCTF Survival Guide" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>University security team&#x27;s structured cybersecurity learning guide.</p><div class="resource-meta"><span class="domain">survival.bigcctf.cn</span></div>
+</article></div></section>
+<section class="category" id="cat-5"><div class="section-heading"><h2>05 <span>Chinese aggregators</span></h2><span class="category-count">8 resources</span></div><div class="resource-grid"><article class="resource" data-id="r039" data-priority="true">
+  <div class="resource-top"><h3><a class="resource-link" href="https://wechat.doonsec.com/" target="_blank" rel="noopener noreferrer">Doonsec — 洞见微信聚合 <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Doonsec — 洞见微信聚合" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Discover technical articles from Chinese WeChat security researchers and teams.</p><div class="resource-meta"><span class="domain">wechat.doonsec.com</span><span class="pick">Start here</span></div>
+</article>
+<article class="resource" data-id="r040" data-priority="true">
+  <div class="resource-top"><h3><a class="resource-link" href="https://github.com/zhengjim/Chinese-Security-RSS" target="_blank" rel="noopener noreferrer">Chinese Security RSS <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Chinese Security RSS" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Chinese security blogs, WeChat feeds and importable OPML resources.</p><div class="resource-meta"><span class="domain">github.com</span><span class="pick">Start here</span></div>
+</article>
+<article class="resource" data-id="r041" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://cn-sec.com/" target="_blank" rel="noopener noreferrer">CN-SEC 中文网 <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark CN-SEC 中文网" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Aggregated Chinese vulnerability analyses, DFIR and technical articles.</p><div class="resource-meta"><span class="domain">cn-sec.com</span></div>
+</article>
+<article class="resource" data-id="r042" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.sec-wiki.com/" target="_blank" rel="noopener noreferrer">SecWiki <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark SecWiki" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Community-curated security articles, tools, RSS feeds and resources.</p><div class="resource-meta"><span class="domain">sec-wiki.com</span></div>
+</article>
+<article class="resource" data-id="r043" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://hack.ltd/" target="_blank" rel="noopener noreferrer">China Security Navigation <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark China Security Navigation" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Directory of Chinese security forums, blogs and research sites.</p><div class="resource-meta"><span class="domain">hack.ltd</span></div>
+</article>
+<article class="resource" data-id="r044" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://nv.hg021b.org/" target="_blank" rel="noopener noreferrer">HG021B Security Navigation <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark HG021B Security Navigation" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Directory of Chinese security laboratories, teams and disclosure platforms.</p><div class="resource-meta"><span class="domain">nv.hg021b.org</span></div>
+</article>
+<article class="resource" data-id="r045" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://github.com/arch3rPro/SecurityRSS" target="_blank" rel="noopener noreferrer">SecurityRSS <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark SecurityRSS" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Curated Chinese and international cybersecurity feeds.</p><div class="resource-meta"><span class="domain">github.com</span></div>
+</article>
+<article class="resource" data-id="r046" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://hackinggrouporg.github.io/" target="_blank" rel="noopener noreferrer">HackingGroup Security Navigation <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark HackingGroup Security Navigation" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Directory of independent security teams, laboratories and communities.</p><div class="resource-meta"><span class="domain">hackinggrouporg.github.io</span></div>
+</article></div></section>
+<section class="category" id="cat-6"><div class="section-heading"><h2>06 <span>Taiwan, Japan &amp; South Korea</span></h2><span class="category-count">8 resources</span></div><div class="resource-grid"><article class="resource" data-id="r047" data-priority="true">
+  <div class="resource-top"><h3><a class="resource-link" href="https://blog.orange.tw/" target="_blank" rel="noopener noreferrer">Orange Tsai&#x27;s Blog <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Orange Tsai&#x27;s Blog" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Taiwan — advanced web vulnerability research and complex software security flaws.</p><div class="resource-meta"><span class="domain">blog.orange.tw</span><span class="pick">Start here</span></div>
+</article>
+<article class="resource" data-id="r048" data-priority="true">
+  <div class="resource-top"><h3><a class="resource-link" href="https://devco.re/en/blog/" target="_blank" rel="noopener noreferrer">DEVCORE Research <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark DEVCORE Research" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Taiwan — enterprise application security and vulnerability research.</p><div class="resource-meta"><span class="domain">devco.re</span><span class="pick">Start here</span></div>
+</article>
+<article class="resource" data-id="r049" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://hitcon.org/" target="_blank" rel="noopener noreferrer">HITCON <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark HITCON" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Taiwan — security conference, technical talks and research discussions.</p><div class="resource-meta"><span class="domain">hitcon.org</span></div>
+</article>
+<article class="resource" data-id="r050" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://ais3.org/" target="_blank" rel="noopener noreferrer">AIS3 <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark AIS3" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Taiwan — cybersecurity education, workshops and research training.</p><div class="resource-meta"><span class="domain">ais3.org</span></div>
+</article>
+<article class="resource" data-id="r051" data-priority="true">
+  <div class="resource-top"><h3><a class="resource-link" href="https://flatt.tech/research/" target="_blank" rel="noopener noreferrer">GMO Flatt Security Research <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark GMO Flatt Security Research" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Japan — application security, vulnerability research and security engineering.</p><div class="resource-meta"><span class="domain">flatt.tech</span><span class="pick">Start here</span></div>
+</article>
+<article class="resource" data-id="r052" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://blog.flatt.tech/" target="_blank" rel="noopener noreferrer">Flatt Security Blog <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Flatt Security Blog" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Japan — Japanese-language security engineering and technical articles.</p><div class="resource-meta"><span class="domain">blog.flatt.tech</span></div>
+</article>
+<article class="resource" data-id="r053" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://dreamhack.io/" target="_blank" rel="noopener noreferrer">Dreamhack <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Dreamhack" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>South Korea — cybersecurity learning, CTF challenges and technical community.</p><div class="resource-meta"><span class="domain">dreamhack.io</span></div>
+</article>
+<article class="resource" data-id="r054" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://theori.io/" target="_blank" rel="noopener noreferrer">Theori <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Theori" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>South Korea — browser, software, system and application security research.</p><div class="resource-meta"><span class="domain">theori.io</span></div>
+</article></div></section>
+<section class="category" id="cat-7"><div class="section-heading"><h2>07 <span>DFIR &amp; blue team</span></h2><span class="category-count">13 resources</span></div><div class="resource-grid"><article class="resource" data-id="r055" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://thetokyonomad.com/dfir/" target="_blank" rel="noopener noreferrer">The Tokyo Nomad — DFIR <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark The Tokyo Nomad — DFIR" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Structured Windows digital forensics and incident response learning material.</p><div class="resource-meta"><span class="domain">thetokyonomad.com</span></div>
+</article>
+<article class="resource" data-id="r056" data-priority="true">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.digiforensics.cn/wiki" target="_blank" rel="noopener noreferrer">DigiForensics Wiki <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark DigiForensics Wiki" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Chinese knowledge base for Windows, Linux, mobile and memory forensics.</p><div class="resource-meta"><span class="domain">digiforensics.cn</span><span class="pick">Start here</span></div>
+</article>
+<article class="resource" data-id="r057" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.didctf.com/" target="_blank" rel="noopener noreferrer">DIDCTF <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark DIDCTF" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Chinese digital evidence research and forensic learning platform.</p><div class="resource-meta"><span class="domain">didctf.com</span></div>
+</article>
+<article class="resource" data-id="r058" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.forensics-wiki.com/" target="_blank" rel="noopener noreferrer">Forensics Wiki <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Forensics Wiki" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Chinese digital forensics knowledge base.</p><div class="resource-meta"><span class="domain">forensics-wiki.com</span></div>
+</article>
+<article class="resource" data-id="r059" data-priority="true">
+  <div class="resource-top"><h3><a class="resource-link" href="https://thedfirreport.com/" target="_blank" rel="noopener noreferrer">The DFIR Report <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark The DFIR Report" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Detailed real-world incident investigations, evidence and timelines.</p><div class="resource-meta"><span class="domain">thedfirreport.com</span><span class="pick">Start here</span></div>
+</article>
+<article class="resource" data-id="r060" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.dfir.training/" target="_blank" rel="noopener noreferrer">DFIR Training <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark DFIR Training" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Collection of forensic tools, references and training resources.</p><div class="resource-meta"><span class="domain">dfir.training</span></div>
+</article>
+<article class="resource" data-id="r061" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.forensicfocus.com/forums/" target="_blank" rel="noopener noreferrer">Forensic Focus Forums <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Forensic Focus Forums" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Professional digital forensic investigator discussion forum.</p><div class="resource-meta"><span class="domain">forensicfocus.com</span></div>
+</article>
+<article class="resource" data-id="r062" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://dfir-toolkit.github.io/" target="_blank" rel="noopener noreferrer">DFIR Toolkit <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark DFIR Toolkit" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Directory of forensic tools organized by evidence and artifact type.</p><div class="resource-meta"><span class="domain">dfir-toolkit.github.io</span></div>
+</article>
+<article class="resource" data-id="r063" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://dfircheatsheet.github.io/" target="_blank" rel="noopener noreferrer">DFIR Cheat Sheet <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark DFIR Cheat Sheet" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Organized forensic references, tools and technical notes.</p><div class="resource-meta"><span class="domain">dfircheatsheet.github.io</span></div>
+</article>
+<article class="resource" data-id="r064" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://cyberdefenders.org/" target="_blank" rel="noopener noreferrer">CyberDefenders <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark CyberDefenders" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Practical blue-team, forensic and threat-hunting challenges.</p><div class="resource-meta"><span class="domain">cyberdefenders.org</span></div>
+</article>
+<article class="resource" data-id="r065" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://blueteamlabs.online/" target="_blank" rel="noopener noreferrer">Blue Team Labs Online <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Blue Team Labs Online" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Interactive SOC, incident response and digital forensics investigations.</p><div class="resource-meta"><span class="domain">blueteamlabs.online</span></div>
+</article>
+<article class="resource" data-id="r066" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.malware-traffic-analysis.net/" target="_blank" rel="noopener noreferrer">Malware Traffic Analysis <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Malware Traffic Analysis" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Network traffic captures and malware investigation exercises.</p><div class="resource-meta"><span class="domain">malware-traffic-analysis.net</span></div>
+</article>
+<article class="resource" data-id="r067" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://aboutdfir.com/" target="_blank" rel="noopener noreferrer">AboutDFIR <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark AboutDFIR" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Community-maintained DFIR learning and professional resources.</p><div class="resource-meta"><span class="domain">aboutdfir.com</span></div>
+</article></div></section>
+<section class="category" id="cat-8"><div class="section-heading"><h2>08 <span>International forums</span></h2><span class="category-count">10 resources</span></div><div class="resource-grid"><article class="resource" data-id="r068" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.reddit.com/r/netsec/" target="_blank" rel="noopener noreferrer">Reddit — r/netsec <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Reddit — r/netsec" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Community-curated technical security research and vulnerability disclosures.</p><div class="resource-meta"><span class="domain">reddit.com</span></div>
+</article>
+<article class="resource" data-id="r069" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.reddit.com/r/websecurityresearch/" target="_blank" rel="noopener noreferrer">r/websecurityresearch <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark r/websecurityresearch" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Specialized discussions on advanced web security research.</p><div class="resource-meta"><span class="domain">reddit.com</span></div>
+</article>
+<article class="resource" data-id="r070" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.reddit.com/r/ReverseEngineering/" target="_blank" rel="noopener noreferrer">r/ReverseEngineering <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark r/ReverseEngineering" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Reverse engineering, binary analysis and software research discussions.</p><div class="resource-meta"><span class="domain">reddit.com</span></div>
+</article>
+<article class="resource" data-id="r071" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.reddit.com/r/AskNetsec/" target="_blank" rel="noopener noreferrer">r/AskNetsec <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark r/AskNetsec" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Technical Q&amp;A and discussions with security practitioners.</p><div class="resource-meta"><span class="domain">reddit.com</span></div>
+</article>
+<article class="resource" data-id="r072" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.reddit.com/r/computerforensics/" target="_blank" rel="noopener noreferrer">r/ComputerForensics <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark r/ComputerForensics" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Forensic investigations, artifacts and tool discussions.</p><div class="resource-meta"><span class="domain">reddit.com</span></div>
+</article>
+<article class="resource" data-id="r073" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://security.stackexchange.com/" target="_blank" rel="noopener noreferrer">Information Security Stack Exchange <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Information Security Stack Exchange" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Technical Q&amp;A on security architecture, protocols and vulnerabilities.</p><div class="resource-meta"><span class="domain">security.stackexchange.com</span></div>
+</article>
+<article class="resource" data-id="r074" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://reverseengineering.stackexchange.com/" target="_blank" rel="noopener noreferrer">Reverse Engineering Stack Exchange <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Reverse Engineering Stack Exchange" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Disassembly, debugging and binary analysis Q&amp;A.</p><div class="resource-meta"><span class="domain">reverseengineering.stackexchange.com</span></div>
+</article>
+<article class="resource" data-id="r075" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://forum.hackthebox.com/" target="_blank" rel="noopener noreferrer">Hack The Box Forum <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Hack The Box Forum" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Security lab discussions, troubleshooting and learning guidance.</p><div class="resource-meta"><span class="domain">forum.hackthebox.com</span></div>
+</article>
+<article class="resource" data-id="r076" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://forum.portswigger.net/" target="_blank" rel="noopener noreferrer">PortSwigger Support Center <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark PortSwigger Support Center" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Burp Suite, web security testing and scanner behavior discussions.</p><div class="resource-meta"><span class="domain">forum.portswigger.net</span></div>
+</article>
+<article class="resource" data-id="r077" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://phrack.org/" target="_blank" rel="noopener noreferrer">Phrack <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Phrack" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Long-running technical publication on computer and operating system security.</p><div class="resource-meta"><span class="domain">phrack.org</span></div>
+</article></div></section>
+<section class="category" id="cat-9"><div class="section-heading"><h2>09 <span>Web security &amp; VAPT</span></h2><span class="category-count">15 resources</span></div><div class="resource-grid"><article class="resource" data-id="r078" data-priority="true">
+  <div class="resource-top"><h3><a class="resource-link" href="https://portswigger.net/research" target="_blank" rel="noopener noreferrer">PortSwigger Research <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark PortSwigger Research" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Advanced research into HTTP, browsers and web application vulnerabilities.</p><div class="resource-meta"><span class="domain">portswigger.net</span><span class="pick">Start here</span></div>
+</article>
+<article class="resource" data-id="r079" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.assetnote.io/resources/research" target="_blank" rel="noopener noreferrer">Assetnote Research <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Assetnote Research" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Enterprise software vulnerability discovery and attack-surface research.</p><div class="resource-meta"><span class="domain">assetnote.io</span></div>
+</article>
+<article class="resource" data-id="r080" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://labs.watchtowr.com/" target="_blank" rel="noopener noreferrer">watchTowr Labs <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark watchTowr Labs" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Technical analyses of enterprise applications and network appliances.</p><div class="resource-meta"><span class="domain">labs.watchtowr.com</span></div>
+</article>
+<article class="resource" data-id="r081" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://projectzero.google/" target="_blank" rel="noopener noreferrer">Google Project Zero <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Google Project Zero" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Advanced vulnerability root-cause analysis, OS and browser security.</p><div class="resource-meta"><span class="domain">projectzero.google</span></div>
+</article>
+<article class="resource" data-id="r082" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://securitylab.github.com/" target="_blank" rel="noopener noreferrer">GitHub Security Lab <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark GitHub Security Lab" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Open-source vulnerability research, code auditing and CodeQL.</p><div class="resource-meta"><span class="domain">securitylab.github.com</span></div>
+</article>
+<article class="resource" data-id="r083" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.sonarsource.com/blog/" target="_blank" rel="noopener noreferrer">Sonar Vulnerability Research <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Sonar Vulnerability Research" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Source-code analysis and vulnerabilities in software projects.</p><div class="resource-meta"><span class="domain">sonarsource.com</span></div>
+</article>
+<article class="resource" data-id="r084" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.synacktiv.com/en/publications" target="_blank" rel="noopener noreferrer">Synacktiv Publications <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Synacktiv Publications" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Web, firmware, mobile and system security research.</p><div class="resource-meta"><span class="domain">synacktiv.com</span></div>
+</article>
+<article class="resource" data-id="r085" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://blog.quarkslab.com/" target="_blank" rel="noopener noreferrer">Quarkslab Blog <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Quarkslab Blog" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Security engineering, binary analysis and reverse engineering.</p><div class="resource-meta"><span class="domain">blog.quarkslab.com</span></div>
+</article>
+<article class="resource" data-id="r086" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://www.zerodayinitiative.com/blog/" target="_blank" rel="noopener noreferrer">Zero Day Initiative <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Zero Day Initiative" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Technical vulnerability disclosures and Pwn2Own research.</p><div class="resource-meta"><span class="domain">zerodayinitiative.com</span></div>
+</article>
+<article class="resource" data-id="r087" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://hackerone.com/hacktivity" target="_blank" rel="noopener noreferrer">HackerOne Hacktivity <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark HackerOne Hacktivity" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Public bug bounty reports and disclosed application security findings.</p><div class="resource-meta"><span class="domain">hackerone.com</span></div>
+</article>
+<article class="resource" data-id="r088" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://pentesterlab.com/" target="_blank" rel="noopener noreferrer">PentesterLab <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark PentesterLab" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Practical application security and source-code review exercises.</p><div class="resource-meta"><span class="domain">pentesterlab.com</span></div>
+</article>
+<article class="resource" data-id="r089" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://owasp.org/www-project-web-security-testing-guide/" target="_blank" rel="noopener noreferrer">OWASP WSTG <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark OWASP WSTG" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Structured methodology for authorized web application security assessments.</p><div class="resource-meta"><span class="domain">owasp.org</span></div>
+</article>
+<article class="resource" data-id="r090" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://owasp.org/www-project-application-security-verification-standard/" target="_blank" rel="noopener noreferrer">OWASP ASVS <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark OWASP ASVS" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Security verification requirements for systematic application audits.</p><div class="resource-meta"><span class="domain">owasp.org</span></div>
+</article>
+<article class="resource" data-id="r091" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://mas.owasp.org/MASTG/" target="_blank" rel="noopener noreferrer">OWASP MASTG <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark OWASP MASTG" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Detailed mobile application security testing methodology.</p><div class="resource-meta"><span class="domain">mas.owasp.org</span></div>
+</article>
+<article class="resource" data-id="r092" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://appsec.fyi/" target="_blank" rel="noopener noreferrer">AppSec.FYI <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark AppSec.FYI" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Curated application security research and learning material.</p><div class="resource-meta"><span class="domain">appsec.fyi</span></div>
+</article></div></section>
+<section class="category" id="cat-10"><div class="section-heading"><h2>10 <span>AI security &amp; automation</span></h2><span class="category-count">7 resources</span></div><div class="resource-grid"><article class="resource" data-id="r093" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://genai.owasp.org/" target="_blank" rel="noopener noreferrer">OWASP GenAI Security Project <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark OWASP GenAI Security Project" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Security guidance for LLM applications and agent-based systems.</p><div class="resource-meta"><span class="domain">genai.owasp.org</span></div>
+</article>
+<article class="resource" data-id="r094" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://simonwillison.net/" target="_blank" rel="noopener noreferrer">Simon Willison&#x27;s Blog <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Simon Willison&#x27;s Blog" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Practical LLMs, AI agents, prompt injection and security implications.</p><div class="resource-meta"><span class="domain">simonwillison.net</span></div>
+</article>
+<article class="resource" data-id="r095" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://protectai.com/blog" target="_blank" rel="noopener noreferrer">Protect AI Research <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Protect AI Research" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>AI supply-chain security, model security and vulnerability research.</p><div class="resource-meta"><span class="domain">protectai.com</span></div>
+</article>
+<article class="resource" data-id="r096" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://blog.trailofbits.com/" target="_blank" rel="noopener noreferrer">Trail of Bits Blog <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Trail of Bits Blog" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Advanced security engineering, code analysis and AI security research.</p><div class="resource-meta"><span class="domain">blog.trailofbits.com</span></div>
+</article>
+<article class="resource" data-id="r097" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://embracethered.com/blog/" target="_blank" rel="noopener noreferrer">Embrace The Red <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark Embrace The Red" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>LLM security, prompt injection and agent trust boundaries.</p><div class="resource-meta"><span class="domain">embracethered.com</span></div>
+</article>
+<article class="resource" data-id="r098" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://atlas.mitre.org/" target="_blank" rel="noopener noreferrer">MITRE ATLAS <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark MITRE ATLAS" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Knowledge base of adversarial threats against AI systems.</p><div class="resource-meta"><span class="domain">atlas.mitre.org</span></div>
+</article>
+<article class="resource" data-id="r099" data-priority="false">
+  <div class="resource-top"><h3><a class="resource-link" href="https://developer.nvidia.com/blog/tag/ai-red-team/" target="_blank" rel="noopener noreferrer">NVIDIA AI Red Team <span class="external" aria-hidden="true">↗</span></a></h3><button class="save js-only" type="button" aria-label="Bookmark NVIDIA AI Red Team" aria-pressed="false" title="Bookmark">☆</button></div>
+  <p>Security research and assessment of AI systems.</p><div class="resource-meta"><span class="domain">developer.nvidia.com</span></div>
+</article></div></section></div>
+<section class="tool js-only" aria-labelledby="search-tool-title"><h2 id="search-tool-title">Discover more Chinese research</h2><p>Search in Chinese to uncover articles and discussions that English-language queries may miss.</p><div class="field"><label for="keyword">Technical topic</label><select id="keyword"><option value="Web安全">Web security — Web安全</option><option value="代码审计">Source-code auditing — 代码审计</option><option value="Java安全">Java security — Java安全</option><option value="API安全">API security — API安全</option><option value="漏洞分析">Vulnerability analysis — 漏洞分析</option><option value="渗透测试">Penetration testing — 渗透测试</option><option value="安卓安全">Android security — 安卓安全</option><option value="逆向工程">Reverse engineering — 逆向工程</option><option value="物联网安全">IoT security — 物联网安全</option><option value="电子数据取证">Digital forensics — 电子数据取证</option><option value="应急响应">Incident response — 应急响应</option><option value="威胁狩猎">Threat hunting — 威胁狩猎</option><option value="智能体安全">AI agent security — 智能体安全</option><option value="大模型安全">LLM security — 大模型安全</option><option value="自动化安全测试">Security automation — 自动化安全测试</option><option value="CTF 题解">CTF write-ups — CTF 题解</option><option value="安全研究">Security research — 安全研究</option></select></div><div class="tool-actions" id="search-links"><a data-engine="google" target="_blank" rel="noopener noreferrer">Google ↗</a><a data-engine="baidu" target="_blank" rel="noopener noreferrer">Baidu ↗</a><a data-engine="xianzhi" target="_blank" rel="noopener noreferrer">Xianzhi ↗</a><a data-engine="kanxue" target="_blank" rel="noopener noreferrer">Kanxue ↗</a><a data-engine="freebuf" target="_blank" rel="noopener noreferrer">FreeBuf ↗</a><a data-engine="seebug" target="_blank" rel="noopener noreferrer">Seebug ↗</a><a data-engine="t00ls" target="_blank" rel="noopener noreferrer">T00ls ↗</a><a data-engine="github" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></section>
+</main>
+<footer class="foot"><div class="wrap"><div class="foot-row"><strong>CyberSec Atlas</strong><a href="#top">Back to top ↑</a></div><p>Curated from the original cybersecurity directory. Links and descriptions are not live-verified; some resources may require registration or have changed addresses. Use technical material in authorized environments only.</p><p>Bookmarks and theme preferences are stored locally in your browser when storage is available. No analytics, accounts, tracking scripts or external libraries are included on this page.</p></div></footer>
+<script>
+(()=>{'use strict';
+const $=(s)=>document.querySelector(s), $$=(s)=>[...document.querySelectorAll(s)];
+const get=(k,fallback)=>{try{return JSON.parse(localStorage.getItem(k))??fallback}catch{return fallback}};
+const put=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch{}};
+const cards=$$('.resource'), sections=$$('.category');
+const ids=new Set(cards.map(c=>c.dataset.id));
+const stored=get('cyber-atlas-bookmarks',[]);
+const saved=new Set(Array.isArray(stored)?stored.filter(id=>ids.has(id)):[]);
+const search=$('#search'),category=$('#category-filter');
+let view='all';
+const norm=s=>s.normalize('NFKC').toLocaleLowerCase();
+const haystacks=new Map(cards.map(c=>[c,norm(c.textContent+' '+c.querySelector('a').href+' '+c.closest('section').querySelector('h2').textContent)]));
+// Search aliases support both English and common Chinese technical terms.
+const aliases={'代码审计':'code audit source-code auditing source-code analysis','安卓安全':'android mobile security','逆向工程':'reverse engineering','Web安全':'web security appsec','漏洞分析':'vulnerability research analysis','电子数据取证':'forensics dfir','应急响应':'incident response','大模型安全':'llm ai security','智能体安全':'agent security','渗透测试':'penetration testing vapt','API安全':'api security','CTF 题解':'ctf write-up writeups'};
+function update(){const q=norm(search.value.trim());const alias=Object.entries(aliases).find(([k])=>norm(k)===q);const terms=q.split(/\s+/).filter(Boolean);let count=0;for(const c of cards){const hay=haystacks.get(c);const matched=!q||terms.every(t=>hay.includes(t))||(alias&&alias[1].split(/\s+/).filter(t=>t.length>3).some(t=>hay.includes(t)));const show=matched&&(category.value==='all'||c.closest('section').id===category.value)&&(view==='all'||(view==='priority'&&c.dataset.priority==='true')||(view==='saved'&&saved.has(c.dataset.id)));c.hidden=!show;if(show)count++;}for(const s of sections){const n=s.querySelectorAll('.resource:not([hidden])').length;s.hidden=n===0;s.querySelector('.category-count').textContent=n+' '+(n===1?'resource':'resources');}$('#result-count').textContent=`${count} of ${cards.length} resources shown`;$('#empty').hidden=count!==0;$('#saved-count').textContent=saved.size;}
+function renderSave(c){const b=c.querySelector('.save'),on=saved.has(c.dataset.id),name=c.querySelector('h3 a').textContent.replace('↗','').trim();b.textContent=on?'★':'☆';b.setAttribute('aria-pressed',String(on));b.setAttribute('aria-label',(on?'Remove bookmark for ':'Bookmark ')+name);b.title=on?'Remove bookmark':'Bookmark';}
+for(const c of cards){renderSave(c);c.querySelector('.save').addEventListener('click',()=>{const id=c.dataset.id;if(saved.has(id))saved.delete(id);else saved.add(id);put('cyber-atlas-bookmarks',[...saved]);renderSave(c);update();});}
+function setView(v){view=v;$$('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===v)));update();}
+$$('[data-view]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
+search.addEventListener('input',update);category.addEventListener('change',update);
+$('#reset').addEventListener('click',()=>{search.value='';category.value='all';setView('all');search.focus();});
+$$('.category-nav a').forEach(a=>a.addEventListener('click',()=>{search.value='';category.value='all';setView('all');}));
+const theme=$('#theme-toggle');function paintTheme(){const dark=document.documentElement.dataset.theme==='dark';theme.textContent=dark?'☀ Light mode':'☾ Dark mode';theme.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');}
+theme.addEventListener('click',()=>{const t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('cyber-atlas-theme',t)}catch{}paintTheme();});paintTheme();
+function updateLinks(){const q=$('#keyword').value,enc=encodeURIComponent;const site={xianzhi:'xz.aliyun.com',kanxue:'bbs.kanxue.com',freebuf:'freebuf.com',seebug:'paper.seebug.org',t00ls:'t00ls.com'};$$('[data-engine]').forEach(a=>{const e=a.dataset.engine;a.href=e==='baidu'?'https://www.baidu.com/s?wd='+enc(q):e==='github'?'https://github.com/search?q='+enc(q)+'&type=repositories':'https://www.google.com/search?q='+enc((site[e]?'site:'+site[e]+' ':'')+q);});}
+$('#keyword').addEventListener('change',updateLinks);updateLinks();update();
+})();
+</script>
+</body>
+</html>
